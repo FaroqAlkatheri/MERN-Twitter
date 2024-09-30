@@ -123,7 +123,7 @@ export const updateUser = async (req, res) => {
     const userId = req.user._id;
     try {
         // find the user in the database and check if they exist
-        let user = await User.findById(userId);
+    let user = await User.findById(userId);
         if (!user) return res.status(404).json({message: "User not found"});
 
         // password update logic
